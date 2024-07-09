@@ -3,106 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            background-color: #f0f2f5;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         .container {
-            text-align: center;
-            max-width: 800px;
             width: 100%;
+            max-width: 400px;
             padding: 20px;
-            box-sizing: border-box;
-            background-color: #fff;
-            border-radius: 5px;
+        }
+
+        .login-box {
+            background: #fff;
+            padding: 50px;
+            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        h1 {
-            font-size: 2.5rem;
+        .login-box h1 {
+            font-size: 1.5em;
             margin-bottom: 20px;
         }
 
-        p {
-            font-size: 1.2rem;
-            line-height: 1.5;
+        .login-box p {
+            color: #666;
             margin-bottom: 20px;
         }
 
-        .buttons {
-            display: flex;
-            flex-direction: column; 
-            align-items: center;
-            gap: 10px;
-        }
-      
-        .buttonss {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
+        form input[type="email"], 
+        form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
-        .button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px 20px;
-            border-radius: 5px;
+        form button {
+            width: 50%;
+            padding: 10px;
+            margin: 15px 0;
             background-color: #007bff;
             color: #fff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 1em;
         }
 
-        .button:hover {
+        form button:hover {
             background-color: #0056b3;
         }
 
-        @media (max-width: 768px) {
+        .alternative-login {
+            margin-top: 20px;
+        }
+
+        .alternative-login p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .social-login img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 400px) {
             .container {
                 padding: 10px;
             }
 
-            h1 {
-                font-size: 2rem;
+            .login-box {
+                padding: 15px;
             }
 
-            p {
-                font-size: 1rem;
-            }
-
-            .button {
-                padding: 5px 10px;
+            .social-login img {
+                width: 35px;
+                height: 35px;
+                margin: 0 5px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Zion Tutorial</h1>
-        <p>Select an option to log in:</p>
-        <div class="buttons">
-            <a href="get@ziontutorial.com" class="button">get@ziontutorial.com</a>
-            <a href="Password" class="button">Password</a>
-        </div>
-        <p>Or use one of the following:</p>
-        <div class="buttonss">
-            <button class="button">Google</button>
-            <button class="button">Meta</button>
-            <button class="button">Apple</button>
+        <div class="login-box">
+            <h1>Back to your digital life</h1>
+            <p>Choose one of the option to go</p>
+            <form>
+                <input type="email" placeholder="get@ziontutorial.com" required>
+                <input type="password" placeholder="Password" required>
+            <div class="alternative-login">
+                <p>Or continue with</p>
+                <div class="social-login">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/23/4b/d5/234bd5f4-e7cc-bfaa-2324-8200ba41a5c9/logo_gsa_ios_color-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-85-220-0.png/246x0w.webp" alt="Google">
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/meta-icon.svg" alt="Meta">
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/apple-icon.svg" alt="Apple">
+                </div>
+             <button type="submit">Log in</button>
+            </form>
+            </div>
         </div>
     </div>
 </body>
 </html>
+
